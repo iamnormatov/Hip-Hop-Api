@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "e01d5fdb-41f2-4537-bb9d-56d116886c84",
+		"name": "Hip Hop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22473861"
+	},
+	"item": [
+		{
+			"name": "User Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"foo\",\r\n    \"email\": \"email3@gm.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email3@gm.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hip Hops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/hiphops",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"hiphops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Hiphop",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer auth_token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"artist\": \"Bobby Smurda\",\r\n    \"groups\": \"Run D.M.C\",\r\n    \"subgenres\": \"Undegroundsdsdsds\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/hiphops",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"hiphops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit HipHop",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer auth_token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"artist\": \"Eminem\",\r\n    \"groups\": \"Salt & Pepa\",\r\n    \"subgenres\": \"Gangsta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/hiphops/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"hiphops",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete HipHop",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer auth_token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/hiphops/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"hiphops",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
